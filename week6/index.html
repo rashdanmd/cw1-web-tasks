@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rashdan's bio</title>
+  </head>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    li {
+      list-style: none;
+    }
+  </style>
+  <body style="margin: 0; font-family: Arial, sans-serif">
+    <header
+      id="home"
+      style="
+        background: #242356;
+        color: #fff;
+        padding: 40px;
+        text-align: center;
+      "
+    >
+      <h1 style="font-size: 3em">
+        Welcome to <span style="color: #ff7d66">Rashdan</span>'s bio.
+      </h1>
+
+      <!-- Navigation -->
+      <nav style="margin-top: 20px">
+        <ul
+          style="
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 20px;
+            flex-wrap: wrap;
+            @media (max-width: 768px) {
+              flex-direction: column;
+              gap: 10px;
+            }
+            @media (max-width: 480px) {
+              gap: 5px;
+            }
+          "
+        >
+          <li>
+            <a href="#eatlike" style="color: #fff; text-decoration: none"
+              >Things I Like to Eat</a
+            >
+          </li>
+          <li>
+            <a href="#eatdislike" style="color: #fff; text-decoration: none"
+              >Things I Don’t Like to Eat</a
+            >
+          </li>
+          <li>
+            <a href="#love" style="color: #fff; text-decoration: none"
+              >What I Love</a
+            >
+          </li>
+          <li>
+            <a href="#hobbies" style="color: #fff; text-decoration: none"
+              >Hobbies</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        id="eatlike"
+        style="
+          background: #59d9a1;
+          color: #242356;
+          padding: 50px;
+          text-align: center;
+        "
+      >
+        <h2 style="font-size: 2.5em">
+          Things I like to <span style="color: #fff">eat</span>.
+        </h2>
+        <img
+          src="https://img.icons8.com/emoji/200/hamburger-emoji.png"
+          alt="Pizza emoji"
+        />
+        <ul style="font-size: 1.2em; line-height: 1.6">
+          <li>🍔 Fast food</li>
+          <li>🍣 Sushi</li>
+          <li>🥩 Steak</li>
+        </ul>
+      </section>
+
+      <section
+        id="eatdislike"
+        style="
+          background: #ff7d66;
+          color: #242356;
+          padding: 50px;
+          text-align: center;
+        "
+      >
+        <h2 style="font-size: 2.5em">
+          Things I don’t like to <span style="color: #fff">eat</span>.
+        </h2>
+        <img
+          src="https://img.icons8.com/emoji/200/broccoli-emoji.png"
+          alt="Broccoli emoji"
+        />
+        <ul style="font-size: 1.2em; line-height: 1.6">
+          <li>🥒 vegetables</li>
+          <li>🥛 milk</li>
+        </ul>
+      </section>
+
+      <section
+        id="love"
+        style="
+          background: #fee352;
+          color: #242356;
+          padding: 50px;
+          text-align: center;
+        "
+      >
+        <h2 style="font-size: 2.5em">
+          What I <span style="color: #ff7d66">love</span>.
+        </h2>
+        <img
+          src="https://img.icons8.com/emoji/200/red-heart.png"
+          alt="Heart emoji"
+        />
+        <ul style="font-size: 1.2em; line-height: 1.6">
+          <li>❤️ Family and friends</li>
+          <li>🌍 Traveling the world</li>
+        </ul>
+      </section>
+
+      <section
+        id="hobbies"
+        style="
+          background: #242356;
+          color: #fff;
+          padding: 50px;
+          text-align: center;
+        "
+      >
+        <h2 style="font-size: 2.5em">
+          My <span style="color: #59d9a1">hobbies</span>.
+        </h2>
+        <img
+          src="https://img.icons8.com/emoji/200/boxing-glove-emoji.png"
+          alt="Boxing glove emoji"
+        />
+        <ul style="font-size: 1.2em; line-height: 1.6">
+          <li>🥋 BJJ</li>
+          <li>🥊 Muay Thai</li>
+          <li>📖 Reading</li>
+        </ul>
+      </section>
+
+      <section
+        id="about"
+        style="background: #f5f5f5; padding: 50px; text-align: center"
+      >
+        <h2 style="font-size: 2.5em; color: #242356">Boring facts about Me</h2>
+        <h3 style="margin-top: 40px; color: #242356">My Work</h3>
+        <table
+          border="1"
+          cellpadding="10"
+          style="
+            margin: 20px auto;
+            border-collapse: collapse;
+            font-size: 1.1em;
+            background: #fff;
+            color: #242356;
+          "
+        >
+          <tr>
+            <th>Role</th>
+            <th>Company</th>
+            <th>Tech Stack</th>
+          </tr>
+          <tr>
+            <td>Front-end Developer</td>
+            <td>Sky Ltd</td>
+            <td>React / Next.js</td>
+          </tr>
+        </table>
+        <p style="margin-top: 20px">
+          Want to know if i can actually code? Head to the mess at
+          <a
+            href="https://github.com/rashdanmd"
+            target="_blank"
+            style="color: #242356"
+            >GitHub</a
+          >.
+        </p>
+      </section>
+    </main>
+
+    <footer
+      style="
+        background: #242356;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      "
+    >
+      <p>
+        &copy; 2025 Created with ❤️ by Rashdan |
+        <a href="#home" style="color: #ff7d66; text-decoration: none"
+          >Back to top</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
