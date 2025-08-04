@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <!-- Document title set in the browser -->
+    <title>Weather API Fetch Test</title>
+  </head>
+  <body>
+    <div>
+      <!-- Input field for user to type a town or city -->
+      <input type="text" id="weather-town" />
+      <!-- searchWeather function triggers when the button is clicked -->
+      <button onclick="searchWeather()">Search</button>
+      <br />
+      <br />
+      <!-- weather results will be displayed -->
+      The current weather is: <span id="results"></span>
+    </div>
+
+    <script type="text/javascript">
+      /* 
+        Personal OpenWeather API key.  
+        Should not be hard-coded.
+        Needs be stored securely e.g. in env file.
+      */
+      const APIKey = "ab2c9d8ba56c7e1446bf3bfbcdcea5b1";
+      // Main function to fetch and display weather data
+      async function searchWeather() {
+        try {
+          // Gets the city name user submitted in the input field
+          const town = document.getElementById("weather-town").value;
+          /*
+            Fetch the data from the OpenWatherMap API endpoint.
+            Includes 2 query parameter: - the town/city name and the perosnal API key
+          */
+          const response = await fetch(
+            `https://api.openweathermap.org/data/2.5/weather?q=${town}&appid=${APIKey}`
+          );
+          /* 
+            This variable stores the weather data. Response is the raw HTTP 
+            response, which is being converted to a JavaScript object as a 
+            result of the .json() method
+          */
+          const responseData = await response.json();
+          // Pulls the first weather object
+          const weather = responseData.weather[0];
+          /* 
+            Captures the element with an id of results, and replaces the content 
+            with the weather data. This includes the main weather condition 
+            and the description.
+          */
+          document.getElementById(
+            "results"
+          ).textContent = `${weather.main} (${weather.description})`;
+          /*
+            If there are any errors during the fetch, such as invalid API key or 
+            city does not exist it will be caught here and will not crash the app.
+          */
+        } catch (error) {
+          /*
+            This logs the error to the console. 
+            User will not see the error on the page.
+          */
+          console.error("Error fetching weather:", error);
+        }
+      }
+    </script>
+  </body>
+</html>

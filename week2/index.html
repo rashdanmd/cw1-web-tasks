@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Names Task</title>
+  </head>
+  <body>
+    <main><ul id="listSection"></ul></main>
+
+    <script>
+      let names = [];
+      for (let i = 0; i < 3; i++) {
+        name = prompt(`Enter name ${i + 1} of 3:`);
+        names.push(name);
+      }
+
+      const listSection = document.getElementById("listSection");
+
+      for (let i = 0; i < names.length; i++) {
+        let message = document.createElement("li");
+        message.textContent = `Hello ${names[i]}, there are ${names[i].length} letters in your name`;
+        listSection.appendChild(message);
+      }
+
+      alert(
+        `Here is the list of names in alphabetical order:\n${[...names]
+          .sort()
+          .join("\n")}`
+      );
+
+      alert(
+        `Here is the list of names in reverse alphabetical order:\n${[...names]
+          .reverse()
+          .join("\n")}`
+      );
+    </script>
+  </body>
+</html>

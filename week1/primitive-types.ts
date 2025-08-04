@@ -1,0 +1,20 @@
+const firstName: string = "Rashdan";
+const alias: symbol = Symbol("Baba");
+const alias2: symbol = Symbol("Baba");
+const age: number = 37;
+const numberOfKids: number = 3;
+const married: boolean = true;
+const willTheKidsSleepEarly: undefined = undefined;
+const freeTime: null = null;
+const bills = 999999999n;
+
+console.log(`👤 Name: ${firstName}`);
+console.log(`🦸 Alias: ${alias.toString()}`);
+console.log(`🦸 Alias 2: ${alias2.toString()}`);
+console.log(`🤔 Are alias 1 and alias 2 the same? ${alias === alias2}`);
+console.log(`🎂 Age: ${age} years old`);
+console.log(`👶 Number of Kids: ${numberOfKids}`);
+console.log(`💍 Married: ${married}`);
+console.log(`😴 Will the kids sleep early tonight? ${willTheKidsSleepEarly}`);
+console.log(`⏳ Free time: ${freeTime} 🫠`);
+console.log(`💸 Bills to pay: £${bills}`);
