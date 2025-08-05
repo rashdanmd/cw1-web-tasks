@@ -35,18 +35,6 @@ The repository is organized by weeks, with each directory corresponding to speci
 
 ## Running the Examples
 
-### HTML Files
-
-Open any HTML file directly in your web browser:
-
-```bash
-# Mac/Linux
-open path/to/file.html
-
-# Windows
-start path/to/file.html
-```
-
 ### JavaScript Files
 
 Run using Node.js:
